@@ -8,8 +8,7 @@ public class Card {
     private int rank;
     private String number;
     private String type;
-    
-    HashMap<String, Integer> numToRank=new HashMap<>();
+
     HashMap<Integer, String> rankToNum=new HashMap<>();
     
     {

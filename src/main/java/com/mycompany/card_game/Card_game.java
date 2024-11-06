@@ -169,12 +169,20 @@ public class Card_game {
             System.out.println("-------x-------\n");
         }
 
-        Player winner=p1.getScore()>p2.getScore()?p1:p2;
-        Player looser=p1.getScore()>p2.getScore()?p2:p1;
-        System.out.println("______ GAME FINISHED ______");
-        System.out.println(winner.getName()+" won the game!\n");
-        System.out.println("______ SCORE BOARD ______");
-        System.out.println(winner.getName() + "(W): " + winner.getScore());
-        System.out.println(looser.getName() + ": " + looser.getScore());
+        if(p1.getScore()==p2.getScore()){
+            System.out.println("______ GAME FINISHED ______");
+            System.out.println("IT's a DRAW!");
+            System.out.println("______ SCORE BOARD ______");
+            System.out.println(p1.getName() + ": " + p1.getScore());
+            System.out.println(p2.getName() + ": " + p2.getScore());
+        }else{
+            Player winner=p1.getScore()>p2.getScore()?p1:p2;
+            Player looser=p1.getScore()>p2.getScore()?p2:p1;
+            System.out.println("______ GAME FINISHED ______");
+            System.out.println(winner.getName()+" won the game!\n");
+            System.out.println("______ SCORE BOARD ______");
+            System.out.println(winner.getName() + "(W): " + winner.getScore());
+            System.out.println(looser.getName() + ": " + looser.getScore());
+        }
     }
 }
